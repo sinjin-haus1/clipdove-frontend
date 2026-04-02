@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
-import { Box, Typography, Grid, Button, Card, CardContent } from '@mui/material';
+import { Box, Typography, Grid, Button, Card, CardContent, CardActions } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import EventIcon from '@mui/icons-material/Event';
 import GameCard from '@/components/GameCard';
 import { mockGames, mockTeams } from '@/lib/mock-data';

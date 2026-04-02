@@ -3,7 +3,9 @@ import React from 'react';
 import { Card, CardContent, CardActions, Typography, Box, Button } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import StatusBadge from './StatusBadge';
+import Link from 'next/link';
 
 interface GameCardProps {
   game: {
@@ -43,7 +45,17 @@ export default function GameCard({ game, teamName }: GameCardProps) {
           </Box>
         </Box>
       </CardContent>
-      <CardActions sx={{ px: 2, pb: 2 }}>
+      <CardActions sx={{ px: 2, pb: 2, gap: 1 }}>
+        <Button
+          size="small"
+          variant="outlined"
+          startIcon={<CloudUploadIcon />}
+          component={Link}
+          href={`/games/${game.id}/upload`}
+          sx={{ borderColor: '#2196f3', color: '#2196f3' }}
+        >
+          Upload Video
+        </Button>
         <Button size="small" variant="contained" sx={{ bgcolor: '#2196f3' }}>
           View Details
         </Button>
